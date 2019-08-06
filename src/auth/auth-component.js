@@ -12,7 +12,9 @@ class AuthComponent extends Component {
         }, 1000);
     };
 
-    signout = () => {
+    signout = callback => {
+        console.log("callback", typeof callback);
+
         setTimeout(() => {
             this.setState({ isAuth: false });
         }, 1000);
